@@ -228,6 +228,10 @@ p {
     color: var(--orange-bright);
 }
 
+.mobile-break {
+    display: none;
+}
+
 .intro-brand {
     margin-bottom: 24px;
     color: var(--orange-bright);
@@ -672,6 +676,10 @@ p {
 
     .intro h1 {
         white-space: normal;
+    }
+
+    .mobile-break {
+        display: inline;
     }
 
     h1 {
