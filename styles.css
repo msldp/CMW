@@ -176,6 +176,7 @@ h1, h2 {
     font-weight: 900;
     letter-spacing: -0.04em;
     text-transform: uppercase;
+    text-wrap: balance;
 }
 
 h1 em, h2 em {
@@ -184,13 +185,13 @@ h1 em, h2 em {
 }
 
 h1 {
-    max-width: 850px;
-    font-size: clamp(40px, 5.5vw, 68px);
+    max-width: 100%;
+    font-size: clamp(28px, 3.8vw, 52px);
 }
 
 h2 {
-    max-width: 850px;
-    font-size: clamp(32px, 4vw, 52px);
+    max-width: 100%;
+    font-size: clamp(26px, 3.2vw, 44px);
 }
 
 h3 {
@@ -202,6 +203,7 @@ h3 {
 
 p {
     font-size: 16px;
+    text-wrap: pretty;
 }
 
 
@@ -220,6 +222,7 @@ p {
 
 .intro h1 {
     color: var(--white);
+    white-space: nowrap;
 }
 
 .intro h1 em {
@@ -249,16 +252,17 @@ p {
 }
 
 .intro-lead {
-    max-width: 680px;
-    margin-top: 28px;
-    color: #94a3b8;
-    font-size: 19px;
-    font-weight: 500;
-    line-height: 1.6;
+    max-width: 80ch;
+    margin-top: 24px;
+    color: #cbd5e1;
+    font-size: clamp(16px, 1.3vw, 19px);
+    font-weight: 400;
+    line-height: 1.7;
 }
 
 .intro-lead strong {
     color: #f8fafc;
+    font-weight: 600;
 }
 
 .intro-process-label {
@@ -320,11 +324,12 @@ p {
 .text-link:hover span { transform: translate(3px, -3px); }
 
 .section-intro {
-    max-width: 720px;
-    margin-top: 24px;
+    max-width: 50ch; /* Deliberately balances the text into a clean 2-line block */
+    margin-top: 20px;
     color: var(--muted);
-    font-size: 18px;
+    font-size: clamp(16px, 1.2vw, 18px);
     line-height: 1.7;
+    text-wrap: pretty;
 }
 
 .services-grid {
@@ -484,8 +489,9 @@ p {
 .background-copy p {
     margin-bottom: 24px;
     color: #94a3b8;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.8;
+    max-width: 70ch;
 }
 
 
@@ -502,10 +508,10 @@ p {
 }
 
 .contact-copy {
-    max-width: 650px;
-    margin-top: 24px;
+    max-width: 75ch;
+    margin-top: 20px;
     color: var(--muted);
-    font-size: 18px;
+    font-size: clamp(16px, 1.2vw, 18px);
     line-height: 1.7;
 }
 
@@ -652,18 +658,28 @@ p {
         font-size: 12px;
     }
 
-    .intro h1 {
+    h1, h2 {
         max-width: 100%;
-        font-size: clamp(36px, 10vw, 52px);
-        line-height: 1.08;
+        line-height: 1.1;
         letter-spacing: -0.03em;
         text-transform: none;
+        white-space: normal;
+    }
+
+    h1 {
+        font-size: clamp(28px, 8vw, 42px);
+    }
+
+    h2 {
+        font-size: clamp(24px, 6.5vw, 36px);
     }
 
     .intro-lead,
     .section-intro,
-    .contact-copy {
+    .contact-copy,
+    .background-copy p {
         font-size: 16px;
+        max-width: 100%;
     }
 
     .process-item {
@@ -689,11 +705,6 @@ p {
 
     .project-content {
         padding: 20px;
-    }
-
-    .background-copy p {
-        font-size: 16px;
-        line-height: 1.7;
     }
 
     .contact-details {
