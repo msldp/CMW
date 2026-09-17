@@ -149,13 +149,11 @@ a {
     color: var(--oxide);
 }
 
-h1,
-h2 {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -0.035em;
-    text-transform: none;
+h1, h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-transform: uppercase; /* Uppercase adds an instant heavy-duty feel */
 }
 
 h1 em, h2 em {
