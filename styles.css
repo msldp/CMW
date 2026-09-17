@@ -59,7 +59,7 @@ a {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Subtle separation when scrolling */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .header-inner {
@@ -330,8 +330,32 @@ p {
     margin-top: 60px;
 }
 
+.service-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-header-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    background-color: rgba(194, 65, 12, 0.08);
+    color: var(--oxide);
+}
+
 .service-item h3 {
-    margin-bottom: 8px;
+    margin: 0;
     color: var(--oxide);
     font-size: 18px;
 }
