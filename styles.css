@@ -8,8 +8,12 @@
     --white: #ffffff;
     --line: #e2e8f0;          /* Clean light gray borders */
     --muted: #475569;         /* Darkened for WCAG AA text contrast */
-    --oxide: #c2410c;         /* Strong rust / terracotta accent */
-    --oxide-hover: #9a3412;
+    
+    /* Unified Orange Palette */
+    --orange-primary: #c2410c;       /* Strong rust / terracotta for light backgrounds */
+    --orange-hover: #9a3412;         /* Hover state for buttons/links */
+    --orange-bright: #f97316;        /* High-contrast vivid orange for dark backgrounds */
+    
     --sage: #1e293b;          /* Dark slate contrast sections */
     --charcoal: #0f172a;
     --stone: #cbd5e1;
@@ -121,7 +125,7 @@ a {
 }
 
 .header-phone:hover {
-    background: var(--oxide);
+    background: var(--orange-primary);
     transform: translateY(-1px);
 }
 
@@ -164,7 +168,7 @@ a {
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--oxide);
+    color: var(--orange-primary);
 }
 
 h1, h2 {
@@ -175,7 +179,7 @@ h1, h2 {
 }
 
 h1 em, h2 em {
-    color: var(--oxide);
+    color: var(--orange-primary);
     font-style: normal;
 }
 
@@ -219,12 +223,12 @@ p {
 }
 
 .intro h1 em {
-    color: #ea580c;
+    color: var(--orange-bright);
 }
 
 .intro-brand {
     margin-bottom: 24px;
-    color: #f97316;
+    color: var(--orange-bright);
     font-size: 14px;
     font-weight: 800;
     letter-spacing: 0.14em;
@@ -280,7 +284,7 @@ p {
 .process-number {
     display: block;
     margin-bottom: 10px;
-    color: #ea580c;
+    color: var(--orange-bright);
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 0.1em;
@@ -307,7 +311,7 @@ p {
     gap: 8px;
     align-items: center;
     margin-top: 24px;
-    color: var(--oxide);
+    color: var(--orange-primary);
     font-size: 14px;
     font-weight: 700;
 }
@@ -351,12 +355,12 @@ p {
     flex-shrink: 0;
     border-radius: var(--radius-md);
     background-color: rgba(194, 65, 12, 0.08);
-    color: var(--oxide);
+    color: var(--orange-primary);
 }
 
 .service-item h3 {
     margin: 0;
-    color: var(--oxide);
+    color: var(--orange-primary);
     font-size: 18px;
 }
 
@@ -377,7 +381,7 @@ p {
 }
 
 .work .eyebrow {
-    color: #f97316;
+    color: var(--orange-bright);
 }
 
 .project-grid {
@@ -474,7 +478,7 @@ p {
 }
 
 .background .eyebrow {
-    color: #f97316;
+    color: var(--orange-bright);
 }
 
 .background-copy p {
@@ -507,7 +511,7 @@ p {
 
 .contact-promise {
     margin-top: 16px;
-    color: var(--oxide);
+    color: var(--orange-primary);
     font-size: 16px;
 }
 
@@ -543,7 +547,7 @@ p {
     display: inline-flex;
     align-items: center;
     padding: 12px 24px;
-    background: var(--oxide);
+    background: var(--orange-primary);
     color: var(--white);
     border-radius: var(--radius-md);
     font-size: 15px;
@@ -553,7 +557,7 @@ p {
 }
 
 .contact-services:hover {
-    background: var(--oxide-hover);
+    background: var(--orange-hover);
 }
 
 
