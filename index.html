@@ -54,16 +54,21 @@
                 <img src="logo.svg" alt="CMW Restoration LLC">
             </a>
 
-            <nav class="main-nav">
+            <nav class="main-nav" id="mainNav">
                 <a href="#services">Services</a>
                 <a href="#work">Work</a>
                 <a href="#background">Background</a>
                 <a href="#contact">Contact</a>
             </nav>
 
-            <a href="tel:7089302672" class="header-phone">
-                <span>Call for an estimate</span> 708.930.2672
-            </a>
+            <div class="header-actions">
+                <a href="tel:7089302672" class="header-phone">
+                    <span>Call for an estimate</span> 708.930.2672
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('active')">
+                    ☰
+                </button>
+            </div>
 
         </div>
     </header>
@@ -152,126 +157,85 @@
                     See how we can help <span>↗</span>
                 </a>
 
+                <div class="services-grid">
 
-                <div class="service-category">
+                    <article class="service-item">
+                        <h3>Concrete Repair &amp; Replacement</h3>
+                        <p>
+                            Repair or replacement of damaged, deteriorated,
+                            or failing concrete surfaces and structures.
+                        </p>
+                    </article>
 
-                    <div class="service-list">
+                    <article class="service-item">
+                        <h3>Masonry Repair</h3>
+                        <p>
+                            Repair and restoration of damaged or deteriorated
+                            brick, block, stone, and other masonry.
+                        </p>
+                    </article>
 
-                        <article class="service-item">
-                            <h3>Concrete Repair &amp; Replacement</h3>
-                            <p>
-                                Repair or replacement of damaged, deteriorated,
-                                or failing concrete surfaces and structures.
-                            </p>
-                        </article>
+                    <article class="service-item">
+                        <h3>Tuckpointing</h3>
+                        <p>
+                            Removal and replacement of deteriorated mortar
+                            joints to help protect and preserve masonry.
+                        </p>
+                    </article>
 
-                    </div>
+                    <article class="service-item">
+                        <h3>Chimney Restoration</h3>
+                        <p>
+                            Repair and restoration of chimney masonry,
+                            including deteriorated mortar joints, brick,
+                            and other masonry components.
+                        </p>
+                    </article>
 
-                </div>
+                    <article class="service-item">
+                        <h3>Basement Waterproofing</h3>
+                        <p>
+                            Identify the source of water intrusion and
+                            address it with a waterproofing approach suited
+                            to the property and its conditions.
+                        </p>
+                    </article>
 
+                    <article class="service-item">
+                        <h3>Foundation Waterproofing</h3>
+                        <p>
+                            Protect foundation walls from water intrusion
+                            with appropriate waterproofing methods and
+                            materials.
+                        </p>
+                    </article>
 
-                <div class="service-category">
+                    <article class="service-item">
+                        <h3>Foundation Repair</h3>
+                        <p>
+                            Address foundation concerns with a repair
+                            approach based on the condition, cause, and
+                            surrounding conditions.
+                        </p>
+                    </article>
 
-                    <div class="service-list">
+                    <article class="service-item">
+                        <h3>Masonry Cleaning</h3>
+                        <p>
+                            Remove buildup, staining, and surface
+                            deterioration while taking care to protect
+                            the underlying masonry.
+                        </p>
+                    </article>
 
-                        <article class="service-item">
-                            <h3>Masonry Repair</h3>
-                            <p>
-                                Repair and restoration of damaged or deteriorated
-                                brick, block, stone, and other masonry.
-                            </p>
-                        </article>
-
-                        <article class="service-item">
-                            <h3>Tuckpointing</h3>
-                            <p>
-                                Removal and replacement of deteriorated mortar
-                                joints to help protect and preserve masonry.
-                            </p>
-                        </article>
-
-                        <article class="service-item">
-                            <h3>Chimney Restoration</h3>
-                            <p>
-                                Repair and restoration of chimney masonry,
-                                including deteriorated mortar joints, brick,
-                                and other masonry components.
-                            </p>
-                        </article>
-
-                    </div>
-
-                </div>
-
-
-                <div class="service-category">
-
-                    <div class="service-list">
-
-                        <article class="service-item">
-                            <h3>Basement Waterproofing</h3>
-                            <p>
-                                Identify the source of water intrusion and
-                                address it with a waterproofing approach suited
-                                to the property and its conditions.
-                            </p>
-                        </article>
-
-                        <article class="service-item">
-                            <h3>Foundation Waterproofing</h3>
-                            <p>
-                                Protect foundation walls from water intrusion
-                                with appropriate waterproofing methods and
-                                materials.
-                            </p>
-                        </article>
-
-                    </div>
-
-                </div>
-
-
-                <div class="service-category">
-
-                    <div class="service-list">
-
-                        <article class="service-item">
-                            <h3>Foundation Repair</h3>
-                            <p>
-                                Address foundation concerns with a repair
-                                approach based on the condition, cause, and
-                                surrounding conditions.
-                            </p>
-                        </article>
-
-                    </div>
-
-                </div>
-
-
-                <div class="service-category">
-
-                    <div class="service-list">
-
-                        <article class="service-item">
-                            <h3>Masonry Cleaning</h3>
-                            <p>
-                                Remove buildup, staining, and surface
-                                deterioration while taking care to protect
-                                the underlying masonry.
-                            </p>
-                        </article>
-
-                        <article class="service-item">
-                            <h3>Masonry Coatings</h3>
-                            <p>
-                                Apply appropriate coatings to help protect
-                                masonry surfaces from moisture and the
-                                elements.
-                            </p>
-                        </article>
-
-                    </div>
+                    <article class="service-item">
+                        <h3>Masonry Coatings</h3>
+                        <p>
+                            Apply appropriate coatings to help protect
+                            masonry surfaces from moisture and the
+                            elements.
+                        </p>
+                    </article>
 
                 </div>
 
@@ -415,7 +379,7 @@
                         708.930.2672
                     </a>
 
-                    <a href="mailto:" class="contact-email">
+                    <a href="mailto:info@cmwrestoration.com" class="contact-email">
                         Email CMW Restoration
                     </a>
 
@@ -456,17 +420,3 @@
 
 </body>
 </html>
-
-
-<!--notes for the photos:
-
-Subject Matter:
-
-01 / Masonry: A crisp, close-up shot of restored tuckpointing or historic brickwork with rich natural lighting.
-
-02 / Concrete: A clean structural pour, steps, or a smoothly finished driveway/patio.
-
-03 / Waterproofing: An interior basement corner with clean membrane/drainage setup or a freshly sealed exterior foundation wall.
-
-
--->

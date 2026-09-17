@@ -7,7 +7,7 @@
     --paper: #f8fafc;         /* Crisp off-white */
     --white: #ffffff;
     --line: #e2e8f0;          /* Clean light gray borders */
-    --muted: #64748b;
+    --muted: #475569;         /* Darkened for WCAG AA text contrast */
     --oxide: #c2410c;         /* Strong rust / terracotta accent */
     --oxide-hover: #9a3412;
     --sage: #1e293b;          /* Dark slate contrast sections */
@@ -53,12 +53,13 @@ a {
 ========================= */
 
 .site-header {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Subtle separation when scrolling */
 }
 
 .header-inner {
@@ -68,7 +69,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
 }
 
 .logo {
@@ -100,6 +101,12 @@ a {
     color: var(--ink);
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .header-phone {
     display: inline-flex;
     align-items: center;
@@ -123,6 +130,17 @@ a {
     font-size: 12px;
     font-weight: 500;
     margin-right: 8px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--line);
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--ink);
 }
 
 
@@ -153,7 +171,7 @@ h1, h2 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 900;
     letter-spacing: -0.04em;
-    text-transform: uppercase; /* Uppercase adds an instant heavy-duty feel */
+    text-transform: uppercase;
 }
 
 h1 em, h2 em {
@@ -184,7 +202,7 @@ p {
 
 
 /* =========================
-   INTRO (DARK MASCULINE HERO)
+   INTRO
 ========================= */
 
 .intro {
@@ -206,7 +224,6 @@ p {
 
 .intro-brand {
     margin-bottom: 24px;
-    text-align: right;
     color: #f97316;
     font-size: 14px;
     font-weight: 800;
@@ -306,29 +323,11 @@ p {
     line-height: 1.7;
 }
 
-.service-category {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 55px 0;
-    border-top: 1px solid var(--line);
-}
-
-.service-category:first-of-type {
-    margin-top: 70px;
-}
-
-.category-heading span {
-    font-size: 13px;
-    font-weight: 800;
-    color: var(--oxide);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.service-list {
+.services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 55px;
+    gap: 40px min(60px, 5vw);
+    margin-top: 60px;
 }
 
 .service-item h3 {
@@ -338,7 +337,6 @@ p {
 }
 
 .service-item p {
-    max-width: 500px;
     color: var(--muted);
     font-size: 15px;
     line-height: 1.7;
@@ -346,7 +344,7 @@ p {
 
 
 /* =========================
-   WORK (CARDS & PHOTOS)
+   WORK
 ========================= */
 
 .work {
@@ -395,7 +393,6 @@ p {
     background-color: #334155;
 }
 
-/* Dark gradient overlay so the text stays crisp and readable over photos */
 .project-image::after {
     content: "";
     position: absolute;
@@ -408,7 +405,6 @@ p {
     z-index: 1;
 }
 
-/* Placeholder Gradients (Fallback until image files are added) */
 .project-image-one { 
     background-image: linear-gradient(135deg, #1e293b, #475569), url('masonry.jpg'); 
 }
@@ -569,15 +565,35 @@ p {
 @media (max-width: 800px) {
     .header-inner {
         width: 92%;
-        min-height: 76px;
-        gap: 12px;
+        min-height: 70px;
+        position: relative;
     }
 
     .logo img {
         width: 165px;
     }
 
-    .main-nav { display: none; }
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
 
     .header-phone {
         padding: 9px 12px;
@@ -614,29 +630,17 @@ p {
         padding: 22px;
     }
     
-    .process-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-category {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 38px 0;
-    }
-
-    .service-list,
+    .process-grid,
+    .services-grid,
     .project-grid,
     .background-inner {
         grid-template-columns: 1fr;
         gap: 24px;
     }
 
-    .service-category:first-of-type {
-        margin-top: 44px;
-    }
-
-    .project-grid {
-        margin-top: 40px;
+    .services-grid {
+        margin-top: 36px;
+        padding-top: 24px;
     }
 
     .project-image {
@@ -673,7 +677,7 @@ p {
 
 @media (max-width: 420px) {
     .logo img {
-        width: 145px;
+        width: 140px;
     }
 
     .header-phone {
