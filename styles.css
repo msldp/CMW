@@ -79,7 +79,7 @@ a {
 
 .logo img {
     display: block;
-    width: 204px;
+    width: 224px;
     height: auto;
 }
 
@@ -204,6 +204,16 @@ p {
     color: #ea580c;
 }
 
+.intro-brand {
+    margin-bottom: 24px;
+    text-align: right;
+    color: #f97316;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
 .intro::after {
     content: "CMW";
     position: absolute;
@@ -298,8 +308,7 @@ p {
 
 .service-category {
     display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 50px;
+    grid-template-columns: 1fr;
     padding: 55px 0;
     border-top: 1px solid var(--line);
 }
@@ -324,6 +333,7 @@ p {
 
 .service-item h3 {
     margin-bottom: 8px;
+    color: var(--oxide);
     font-size: 18px;
 }
 
@@ -557,9 +567,52 @@ p {
 ========================= */
 
 @media (max-width: 800px) {
+    .header-inner {
+        width: 92%;
+        min-height: 76px;
+        gap: 12px;
+    }
+
+    .logo img {
+        width: 165px;
+    }
+
     .main-nav { display: none; }
-    .section { padding: 70px 0; }
-    .intro { padding: 80px 0 60px; }
+
+    .header-phone {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .header-phone span {
+        display: none;
+    }
+
+    .section { padding: 64px 0; }
+    .intro { padding: 64px 0 52px; }
+
+    .intro-brand {
+        margin-bottom: 18px;
+        font-size: 12px;
+    }
+
+    .intro h1 {
+        max-width: 100%;
+        font-size: clamp(36px, 10vw, 52px);
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        text-transform: none;
+    }
+
+    .intro-lead,
+    .section-intro,
+    .contact-copy {
+        font-size: 16px;
+    }
+
+    .process-item {
+        padding: 22px;
+    }
     
     .process-grid {
         grid-template-columns: 1fr;
@@ -567,17 +620,64 @@ p {
 
     .service-category {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 16px;
+        padding: 38px 0;
     }
 
     .service-list,
     .project-grid,
     .background-inner {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 24px;
+    }
+
+    .service-category:first-of-type {
+        margin-top: 44px;
+    }
+
+    .project-grid {
+        margin-top: 40px;
+    }
+
+    .project-image {
+        min-height: 210px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .background-copy p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .contact-details {
+        align-items: stretch;
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    .contact-phone,
+    .contact-email,
+    .contact-services {
+        justify-content: center;
+        width: 100%;
     }
 
     .footer-inner {
         flex-direction: column;
+        padding: 34px 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo img {
+        width: 145px;
+    }
+
+    .header-phone {
+        padding: 8px 10px;
+        font-size: 11px;
     }
 }
