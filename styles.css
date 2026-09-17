@@ -222,7 +222,6 @@ p {
 
 .intro h1 {
     color: var(--white);
-    white-space: nowrap;
 }
 
 .intro h1 em {
@@ -299,6 +298,10 @@ p {
     color: #cbd5e1;
     font-size: 15px;
     line-height: 1.6;
+}
+
+.process-restore p span {
+    display: inline;
 }
 
 
@@ -664,6 +667,11 @@ p {
         letter-spacing: -0.03em;
         text-transform: none;
         white-space: normal;
+        text-wrap: balance;
+    }
+
+    .intro h1 {
+        white-space: normal;
     }
 
     h1 {
@@ -684,6 +692,10 @@ p {
 
     .process-item {
         padding: 22px;
+    }
+
+    .process-restore p span {
+        display: block;
     }
     
     .process-grid,
