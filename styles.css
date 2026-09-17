@@ -3,14 +3,14 @@
 ========================= */
 
 :root {
-    --ink: #0f172a;
-    --paper: #f8fafc;
+    --ink: #0f172a;           /* Deep slate charcoal */
+    --paper: #f8fafc;         /* Crisp off-white */
     --white: #ffffff;
-    --line: #e2e8f0;
+    --line: #e2e8f0;          /* Clean light gray borders */
     --muted: #64748b;
-    --oxide: #c2410c;
+    --oxide: #c2410c;         /* Strong rust / terracotta accent */
     --oxide-hover: #9a3412;
-    --sage: #1e293b;
+    --sage: #1e293b;          /* Dark slate contrast sections */
     --charcoal: #0f172a;
     --stone: #cbd5e1;
     --radius-lg: 12px;
@@ -38,6 +38,7 @@ body {
     background: var(--paper);
     color: var(--ink);
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-weight: 450;
     line-height: 1.6;
 }
 
@@ -52,7 +53,7 @@ a {
 ========================= */
 
 .site-header {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(12px);
     position: sticky;
@@ -142,7 +143,7 @@ a {
 .eyebrow {
     margin-bottom: 18px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--oxide);
@@ -152,8 +153,8 @@ h1,
 h2 {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
     text-transform: none;
 }
 
@@ -185,69 +186,84 @@ p {
 
 
 /* =========================
-   INTRO
+   INTRO (DARK MASCULINE HERO)
 ========================= */
 
 .intro {
-    background: var(--paper);
-    padding: 145px 0 110px;
-    border-bottom: 1px solid var(--line);
+    background: #0f172a;
+    color: var(--white);
+    padding: 140px 0 110px;
+    border-bottom: 1px solid #1e293b;
     position: relative;
     overflow: hidden;
+}
+
+.intro h1 {
+    color: var(--white);
+}
+
+.intro h1 em {
+    color: #ea580c;
 }
 
 .intro::after {
     content: "CMW";
     position: absolute;
-    right: -25px;
-    bottom: -55px;
-    color: rgba(15, 23, 42, 0.03);
+    right: -20px;
+    bottom: -40px;
+    color: rgba(255, 255, 255, 0.03);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
-    font-size: 240px;
+    font-size: 260px;
     line-height: 1;
     pointer-events: none;
 }
 
 .intro-lead {
-    max-width: 760px;
-    margin-top: 35px;
-    color: var(--muted);
-    font-size: 20px;
-    line-height: 1.7;
+    max-width: 680px;
+    margin-top: 28px;
+    color: #94a3b8;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.intro-lead strong {
+    color: #f8fafc;
 }
 
 .intro-process-label {
-    margin-top: 40px;
+    margin-top: 36px;
+    color: #cbd5e1;
 }
 
 .process-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 24px;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .process-item {
-    background: var(--white);
-    padding: 32px;
-    border: 1px solid var(--line);
+    background: #1e293b;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
 .process-number {
     display: block;
-    margin-bottom: 12px;
-    color: var(--oxide);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    color: #ea580c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
 .process-item p {
-    color: var(--muted);
+    color: #cbd5e1;
     font-size: 15px;
     line-height: 1.6;
 }
@@ -261,8 +277,7 @@ p {
     background: var(--white);
 }
 
-.text-link,
-.contact-services {
+.text-link {
     display: inline-flex;
     gap: 8px;
     align-items: center;
@@ -272,10 +287,8 @@ p {
     font-weight: 700;
 }
 
-.text-link span,
-.contact-services span { font-size: 16px; transition: transform 180ms ease; }
-.text-link:hover span,
-.contact-services:hover span { transform: translate(3px, -3px); }
+.text-link span { font-size: 16px; transition: transform 180ms ease; }
+.text-link:hover span { transform: translate(3px, -3px); }
 
 .section-intro {
     max-width: 720px;
@@ -299,9 +312,10 @@ p {
 
 .category-heading span {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--oxide);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .service-list {
@@ -324,7 +338,7 @@ p {
 
 
 /* =========================
-   WORK
+   WORK (CARDS & PHOTOS)
 ========================= */
 
 .work {
@@ -363,17 +377,41 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #334155;
     color: var(--white);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.1em;
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-color: #334155;
 }
 
-.project-image-one { background: linear-gradient(135deg, #1e293b, #475569); }
-.project-image-two { background: linear-gradient(135deg, #0f172a, #334155); }
-.project-image-three { background: linear-gradient(135deg, #3b0764, #1e293b); }
+/* Dark gradient overlay so the text stays crisp and readable over photos */
+.project-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.75) 100%);
+}
+
+.project-image span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Placeholder Gradients (Fallback until image files are added) */
+.project-image-one { 
+    background-image: linear-gradient(135deg, #1e293b, #475569), url('masonry.jpg'); 
+}
+
+.project-image-two { 
+    background-image: linear-gradient(135deg, #0f172a, #334155), url('concrete.jpg'); 
+}
+
+.project-image-three { 
+    background-image: linear-gradient(135deg, #3b0764, #1e293b), url('waterproofing.jpg'); 
+}
 
 .project-content {
     padding: 24px;
@@ -442,6 +480,7 @@ p {
 .contact-details {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 20px;
     margin-top: 40px;
 }
@@ -466,7 +505,22 @@ p {
     border-color: var(--ink);
 }
 
-.contact-services { margin-top: 0; }
+.contact-services {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: var(--oxide);
+    color: var(--white);
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+    margin-top: 0;
+}
+
+.contact-services:hover {
+    background: var(--oxide-hover);
+}
 
 
 /* =========================
