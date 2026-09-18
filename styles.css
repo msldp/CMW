@@ -722,8 +722,13 @@ h2 em .dot {
     margin: 0 auto;
     padding: 45px 0;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 30px;
+}
+
+.footer-inner > div:last-child {
+    text-align: right;
 }
 
 .footer-inner strong {
@@ -896,6 +901,10 @@ h2 em .dot {
     .footer-inner {
         flex-direction: column;
         padding: 34px 0;
+    }
+
+    .footer-inner > div:last-child {
+        text-align: left;
     }
 }
 
