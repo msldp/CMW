@@ -281,6 +281,35 @@ p {
     font-weight: 600;
 }
 
+/* Base styles (Desktop) */
+.intro-brand {
+    margin-bottom: 1.25rem;
+}
+
+.intro-brand span {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #f26522;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+    .intro-brand {
+        margin-bottom: 1rem;
+    }
+
+    .intro-brand span {
+        font-size: 0.875rem; /* Slightly smaller text for narrower viewports */
+        padding: 0.35rem 0.85rem;
+    }
+}
+
 /* Action Buttons - Right Aligned */
 .intro-actions {
     display: flex;
