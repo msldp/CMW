@@ -96,14 +96,14 @@ a {
 
 .main-nav a {
     position: relative;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--muted);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--orange-primary);
     transition: color 0.2s ease;
 }
 
 .main-nav a:hover {
-    color: var(--ink);
+    color: var(--orange-hover);
 }
 
 .header-actions {
