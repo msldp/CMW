@@ -183,6 +183,9 @@ h1, h2 {
 h1 em, h2 em {
     color: var(--white);
     font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: var(--orange-bright);
+    text-underline-offset: 8px;
 }
 
 h1 {
@@ -248,6 +251,14 @@ p {
     color: var(--orange-bright);
     text-decoration: none;
     display: inline-block;
+    margin-left: 0.08em;
+}
+
+h2 em .dot {
+    color: var(--orange-bright);
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 0.08em;
 }
 
 .intro::after {
@@ -763,7 +774,7 @@ p {
     }
 
     .section { padding: 64px 0; }
-    .intro { padding: 64px 0 52px; }
+    .intro { padding: 48px 0 40px; }
 
     /* Mobile Watermark Override */
     .intro::after {
@@ -775,6 +786,8 @@ p {
 
     .intro-actions {
         justify-content: flex-start;
+        gap: 12px;
+        margin-top: 24px;
     }
 
     h1, h2 {
@@ -788,6 +801,8 @@ p {
 
     .intro h1 {
         white-space: normal;
+        font-size: clamp(32px, 9vw, 42px);
+        line-height: 1.06;
     }
 
     .mobile-break {
@@ -808,6 +823,14 @@ p {
     .background-copy p {
         font-size: 16px;
         max-width: 100%;
+    }
+
+    .intro-lead {
+        line-height: 1.5;
+    }
+
+    .intro-process-label {
+        margin-top: 36px;
     }
 
     .process-item {
