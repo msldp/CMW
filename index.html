@@ -57,15 +57,15 @@
             <nav class="main-nav" id="mainNav">
                 <a href="#services">Services</a>
                 <a href="#work">Work</a>
-                <a href="#background">Background</a>
+                <a href="#background">About Us</a>
                 <a href="#contact">Contact</a>
             </nav>
 
             <div class="header-actions">
-                <a href="tel:7089302672" class="header-phone">
+                <a href="tel:7089302672" class="header-phone" title="Call CMW Restoration for a free estimate">
                     <span>Call for an estimate</span> 708.930.2672
                 </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('active')">
+                <button class="mobile-menu-toggle" type="button" title="Open navigation menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
                     ☰
                 </button>
             </div>
@@ -84,7 +84,7 @@
 
             <div class="intro-inner">
 
-                <p class="intro-brand">CMW Restoration LLC</p>
+                <p class="intro-brand">CMW Restoration</p>
 
                 <h1>
                     Understand the<span class="mobile-break"><br></span> <em>problem first.</em>
@@ -94,7 +94,7 @@
                     <strong>Every house has a story.</strong>
                     We've seen a lot of them. The right repair isn't always
                     the biggest repair, or the most obvious one. We look beyond
-                    the visible damage, understand what's causing the issue,
+                    the visible damage, understand the root cause,
                     and recommend a practical solution.
                 </p>
 
@@ -107,14 +107,18 @@
                     <article class="process-item">
                         <span class="process-number">Diagnose</span>
                         <p>
-                            Assess the problem. See the full picture. Tailor a solution.
+                            <span>Assess the problem.</span>
+                            <span>See the full picture.</span>
+                            <span>Tailor a solution.</span>
                         </p>
                     </article>
 
                     <article class="process-item">
                         <span class="process-number">Recommend</span>
                         <p>
-                            Review the findings. Explain the options. Answer your questions.
+                            <span>Review the findings.</span>
+                            <span>Explain the options.</span>
+                            <span>Answer your questions.</span>
                         </p>
                     </article>
 
@@ -155,7 +159,7 @@
                     and protect your property.
                 </p>
 
-                <a href="#contact" class="text-link">
+                <a href="#contact" class="text-link" title="Go to contact information">
                     See how we can help <span>↗</span>
                 </a>
 
@@ -170,7 +174,7 @@
                             <h3>Concrete Repair &amp; Replacement</h3>
                         </div>
                         <p>
-                            Repair or replacement of damaged, deteriorated,
+                            Repair or replace damaged, deteriorated,
                             or failing concrete surfaces and structures.
                         </p>
                     </article>
@@ -258,8 +262,8 @@
                             <h3>Foundation Repair</h3>
                         </div>
                         <p>
-                            Address foundation concerns with a repair
-                            approach based on the condition, cause, and
+                            Address foundation concerns with structural repair
+                            based on the condition, cause, and
                             surrounding conditions.
                         </p>
                     </article>
@@ -273,9 +277,7 @@
                             <h3>Masonry Cleaning</h3>
                         </div>
                         <p>
-                            Remove buildup, staining, and surface
-                            deterioration while taking care to protect
-                            the underlying masonry.
+                            Remove buildup, staining, and surface deterioration while preserving the underlying masonry.
                         </p>
                     </article>
 
@@ -374,7 +376,7 @@
 
                 <div class="background-heading">
 
-                    <p class="eyebrow">BACKGROUND</p>
+                    <p class="eyebrow">ABOUT US</p>
 
                     <h2>
                         Experience you can <em>build on.</em>
@@ -385,19 +387,12 @@
                 <div class="background-copy">
 
                     <p>
-                        CMW Restoration brings more than 20 years of hands-on
-                        experience in masonry and restoration, backed by union
-                        training and apprenticeship experience. That background
-                        includes masonry restoration, tuckpointing, concrete
-                        repair, waterproofing, and commercial restoration work.
+                        CMW Restoration brings more than 20 years of hands-on experience in masonry and restoration, backed by union training and apprenticeship experience. Our work spans masonry restoration, tuckpointing, concrete repair, waterproofing, and commercial restoration.
+
                     </p>
 
                     <p>
-                        Over the years, we've seen a lot of different problems
-                        and learned what to look for, how to understand what's
-                        causing them, and how to approach the repair properly.
-                        We bring practical, hard-earned knowledge to every
-                        property and every repair.
+                        Over the years, we've encountered a wide range of problems and learned what to look for, how to understand what's causing them, and how to approach the repair properly. We bring practical, hard-earned knowledge to every property and every repair, and we stand behind the work we do.
                     </p>
 
                 </div>
@@ -441,7 +436,7 @@
                         Email CMW Restoration
                     </a>
 
-                    <a href="#services" class="contact-services">
+                    <a href="#services" class="contact-services" title="View CMW Restoration services">
                         Explore services <span>↗</span>
                     </a>
 
@@ -475,6 +470,37 @@
         </div>
 
     </footer>
+
+    <script>
+        const menuButton = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.getElementById('mainNav');
+
+        const closeMenu = () => {
+            mainNav.classList.remove('active');
+            menuButton.setAttribute('aria-expanded', 'false');
+        };
+
+        menuButton.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('active');
+            menuButton.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('click', event => {
+            if (!event.target.closest('.site-header')) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                closeMenu();
+            }
+        });
+    </script>
 
 </body>
 </html>
